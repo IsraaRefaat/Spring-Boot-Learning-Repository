@@ -1,8 +1,6 @@
 package com.esraa.springsecdemo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +11,7 @@ import org.springframework.stereotype.Component;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
     private String password;
